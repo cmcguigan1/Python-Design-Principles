@@ -107,3 +107,24 @@ Creating a decorator to 'wrap' the functionality of a function.
 
 
 ## Proxy Pattern
+In Proxy Pattern we provide a placeholder or a surrogate object to control access to the original object. In simple terms, providing a proxy or dummy layer of information before the client before accessing the original data. It falls under the Gang of Four (GoF) design patterns and is designed to provide a surrogate or placeholder for another object to control access to it. 
+
+The Proxy Pattern involves creating a class (the proxy) that has the same interface as the real object it represents. The proxy acts as an intermediary or surrogate, controlling access to the real object.
+
+There's 4 Types of Proxys:
+1. Remote Proxy -> used to make interface resources remotely available like a web service.
+2. Virtual Proxy -> used when there are multiple database calls being done for extracting a huge file, Since it is an expensive process we can use a virtual proxy to reduce cost.
+3. Protective Proxy -> used when there is security or privacy of data is required. With the help of a proxy pattern, we can verify whether the user has access to the data or not.
+4. Smart Proxy -> used when we require an extra layer of security for a specific object.
+
+### Use Case
+
+
+### Main Idea
+
+
+### Key Components
+1. Subject -> Base Interface implemneted by the Real Subject and the Proxy. Defines the methods the Client can use to interact with the Real Subject.
+2. Real Subject -> Class implements Subject. Defines all the methods. Actual object the Proxy represents.
+3. Proxy -> Class implements Subject. Holds reference to the Real Subject. Delegates Client requests to the Real Subject. Can add functionality beofre or after forewarding requests. 
+4. Client -> Client code interacting with the Proxy thinking that it's the Real Subject. 
