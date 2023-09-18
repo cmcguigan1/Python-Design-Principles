@@ -17,7 +17,32 @@ The adapter pattern helps in converting the interface of a class into another in
 2. Adaptee -> Existing class who's functionality we need, but its interface is incompatible with the target interface
 3. Adpater -> A new class to bridge the 2. Implements the Target Interface and holds a reference to the Adaptee. Wrpas around the Adaptee to take client requests from Target Interface methods and convert them into requests the Adaptee understands
 
-<img src='../../Assets/AdapterClassDiagram.png'>
+<img src='../../Assets/AdapterClassDiagram.png' width="70%">
+
+
+## Bridge Pattern
+The bridge pattern is designed to separate an object's abstraction from its implementation. The main goal is to decouple an abstraction and its implementation so that they can vary independently. Part of the Gang of Four (GoF) design patterns.
+
+
+
+## Composite Pattern
+In a composite pattern, the client is able to operate objects which may or may not represent its hierarchy. In simple terms composite pattern allows you to create hierarchical tree of unique complexities which allows treating every object individually.
+
+### Use Case
+- When you want to add new kinds of components to specific objects
+- It provides manageable interfaces and flexibility in its structure.
+- It helps to define hierarchies containing complex and primitive objects.
+
+### Main Idea
+- Create larger components from smaller components to improve reusability 
+- For example, A drawing simulator draws shapes like lines, circles, squares..etc. Without composite pattern, you would need a class for each of these shapes, but a square is really just 4 lines. With composite, you utilize the lines class to prevent duplicate code
+
+### Key Components
+1. Component -> Interface for the objects in the composition. Declares an interface for accessing and managing its child components.
+2. Leaf -> Class extends Component. Defines behavior for primitive objects in the composition. A leaf has no children.
+3. Composite -> Class extends Component. Implements child-related behavior. Has children.
+
+<img src="../../Assets/CompositeClassDiagram.png" width="70%">
 
 
 ## Decorator Pattern
@@ -59,3 +84,11 @@ Creating a decorator to 'wrap' the functionality of a function.
 1. The decorator function with an internal function called wrapper that returns the internal function
 2. The base function being extended
 
+
+## Facade Pattern
+
+
+## Flyweight Pattern
+
+
+## Proxy Pattern
