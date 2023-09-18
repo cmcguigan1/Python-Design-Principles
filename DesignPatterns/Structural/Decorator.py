@@ -1,3 +1,4 @@
+''' Decorator Pattern with Classes'''
 # Interface
 class Coffee:
     def cost(self):
@@ -26,3 +27,25 @@ class AddMilkDecorator(CoffeeDecorator):
 class AddSugarDecorator(CoffeeDecorator):
     def cost(self):
         return self._coffee.cost() + 0.5
+    
+
+''' Decorator Pattern with Functions '''
+def my_decorator(func):
+    def wrapper():
+        print("Adding something before the function call")
+        func()
+        print("Adding something after the function call")
+    
+    return wrapper
+
+# "Decorating the function"
+@my_decorator
+def example_function():
+    print("Inside the function!!")
+
+example_function()
+''' Output: 
+Adding something before the function call
+Inside the function!!
+Adding something after the function call 
+'''
