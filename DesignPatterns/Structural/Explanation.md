@@ -17,6 +17,8 @@ The adapter pattern helps in converting the interface of a class into another in
 2. Adaptee -> Existing class who's functionality we need, but its interface is incompatible with the target interface
 3. Adpater -> A new class to bridge the 2. Implements the Target Interface and holds a reference to the Adaptee. Wrpas around the Adaptee to take client requests from Target Interface methods and convert them into requests the Adaptee understands
 
+<img src='../../Assets/AdapterClassDiagram.png'>
+
 
 ## Decorator Pattern
 Decorator is a structural pattern that allows adding new behaviors to objects dynamically by placing them inside special wrapper objects, called decorators. Often used to extend the functionality of classes in a flexible and reusable way, without modifying their source code.
