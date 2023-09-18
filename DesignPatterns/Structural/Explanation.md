@@ -17,12 +17,27 @@ The adapter pattern helps in converting the interface of a class into another in
 2. Adaptee -> Existing class who's functionality we need, but its interface is incompatible with the target interface
 3. Adpater -> A new class to bridge the 2. Implements the Target Interface and holds a reference to the Adaptee. Wrpas around the Adaptee to take client requests from Target Interface methods and convert them into requests the Adaptee understands
 
-<img src='../../Assets/AdapterClassDiagram.png' width="70%">
+<img src='../../Assets/AdapterClassDiagram.png' width="70%" margin="0 auto">
 
 
 ## Bridge Pattern
 The bridge pattern is designed to separate an object's abstraction from its implementation. The main goal is to decouple an abstraction and its implementation so that they can vary independently. Part of the Gang of Four (GoF) design patterns.
 
+### Use Case
+- When we need to code something that will have multiple implementations and also multiple abstractions
+- For example, Imagine you are building a GUI library that needs to support multiple platforms (e.g., Windows and Linux) and multiple rendering engines (e.g., DirectX and OpenGL). The Bridge Pattern helps you separate the platform-specific code (implementation) from the GUI elements (abstraction).
+
+### Main Idea:
+- Have a base Interface and base Abstract Class that has a reference to the base Interface.
+- Then you can have any other classes extend or implement the above
+
+### Key Components
+1. Implementor -> Base Interface. 
+2. Abstraction -> Base Abstract Class. Has a reference to the Implementor.
+3. Concrete Implementor(s) -> Concrete Classes. Provide specific implementations of Implementor.
+4. Concrete Abstraction(s) -> Concrete Classes. Extend Abstraction. 
+
+<img src="../../Assets/BridgeClassDiagram.png" width="70%" margin="0 auto">
 
 
 ## Composite Pattern
@@ -42,7 +57,7 @@ In a composite pattern, the client is able to operate objects which may or may n
 2. Leaf -> Class extends Component. Defines behavior for primitive objects in the composition. A leaf has no children.
 3. Composite -> Class extends Component. Implements child-related behavior. Has children.
 
-<img src="../../Assets/CompositeClassDiagram.png" width="70%">
+<img src="../../Assets/CompositeClassDiagram.png" width="70%" margin="0 auto">
 
 
 ## Decorator Pattern
