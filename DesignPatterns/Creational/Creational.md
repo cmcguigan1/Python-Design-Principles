@@ -69,7 +69,21 @@ The Singleton Pattern specifies that only one instance can be instantiated from 
 
 
 ## Prototype
+Prototype pattern creates a fully initialized instance that can be cloned. It lets us copy already existing objects without making the code dependent on other classes. A prototype pattern builds a product by copying the initial state of a prototype object.
+
 <img src="../../Assets/Prototype.png" width="70%">
+
+### Use Case
+- For example, We can take a board game like chess as an example. The initial setup of a chess board is initialized once with the king, rooks, bishops, and other pieces in their designated places. Every time a new game starts, we call this object with the initial setup is already done, clone it and begin the game. There’s no need to create a new setup every single time the game is played.
+
+### Main Idea
+- The key idea behind this pattern is to avoid the overhead of creating objects from scratch when their structure is similar, and instead, create new instances by cloning an existing object (prototype).
+
+### Key Components
+1. Prototype Interface or Abstract Class -> Declares a method for cloning itself. It defines a clone() method that concrete prototypes must implement.
+2. Concrete Prototype -> Class that implements the Prototype Interface and implement the clone() method 
+3. Client -> Responsible for creating new objects by cloning existing prototypes. It requests a new object by invoking the clone() method on a prototype instance.
+
 <img src="../../Assets/PrototypeClassDiagram.gif" width="70%">
 
 
