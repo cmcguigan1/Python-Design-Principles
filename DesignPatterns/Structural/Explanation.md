@@ -84,6 +84,8 @@ Creating multiple decorators to extend the functionality of a concrete class in 
 3. Decorator -> An abstract class. Implements the same interface as the component and maintains a reference to that component. Serves as the base class for concrete decorators
 4. Concrete Decorator -> A concrete class. Extends the functionality of the component by adding new behavior or state. They override or add new methods to the component while delegating the original behavior to the component.
 
+<img src="../../Assets/DecoratorClassDiagram.png" width="70%" margin="0 auto">
+
 ### Method 2: Functions
 Creating a decorator to 'wrap' the functionality of a function. 
 
@@ -104,7 +106,26 @@ Creating a decorator to 'wrap' the functionality of a function.
 
 
 ## Flyweight Pattern
+Flyweight Patterns helps us to reuse similar kinds of existing objects by storing and creating new objects when similar objects are not found. Therefore in simple terms, it helps us to reduce the expense of multiple instances that contains the same data. Reduce memory usage or computational costs by sharing as much as possible with related objects. 
 
+### Use Case
+- To reduce storage cost, by reusing similar objects.
+- When a large number of similar objects are required.
+- When the application is dependent on unique object identity.
+
+### Main Idea
+- Split an object's state into two parts: intrinsic and extrinsic.
+1. Intrinsic State: This part of the state is common and can be shared among multiple objects. It remains constant across instances and is often stored in a shared data structure.
+2. Extrinsic State: This part of the state is unique to each object and cannot be shared. It is passed as a parameter to the methods of the flyweight objects.
+- Create a large number of objects efficiently by reusing the shared intrinsic state and minimizing the storage required for the extrinsic state.
+
+### Key Components
+1. Flyweight Interface -> Interface or Abstract Class. Declares methods for the Flyweight to imlement. Usually declares a method that accepts the extrinsic state as a parameter.
+2. Concrete Flyweight -> Concrete Class implements the Interface. Stores Instrinsic state (can be shared among multilpe instances). Instances of Concrete Flyweight and usually created & managed by Flyweight Factory.
+3. Flyweight Factory -> Class. Responsible for creating and managing instances of the Concrete Flyweight class. Ensures Flyweights are reused, and new ones are created when necessary, based on Extrinsic state provided.
+4. Client -> Uses Flyweight Objects. Passes the Extrinsic data ehen necessary.
+
+<img src="../../Assets/FlyweightClassDiagram.png" width="70%" margin="0 auto">
 
 ## Proxy Pattern
 In Proxy Pattern we provide a placeholder or a surrogate object to control access to the original object. In simple terms, providing a proxy or dummy layer of information before the client before accessing the original data. It falls under the Gang of Four (GoF) design patterns and is designed to provide a surrogate or placeholder for another object to control access to it. 
@@ -118,13 +139,12 @@ There's 4 Types of Proxys:
 4. Smart Proxy -> used when we require an extra layer of security for a specific object.
 
 ### Use Case
-
-
-### Main Idea
-
+- Controlling access to an object
 
 ### Key Components
 1. Subject -> Base Interface implemneted by the Real Subject and the Proxy. Defines the methods the Client can use to interact with the Real Subject.
 2. Real Subject -> Class implements Subject. Defines all the methods. Actual object the Proxy represents.
 3. Proxy -> Class implements Subject. Holds reference to the Real Subject. Delegates Client requests to the Real Subject. Can add functionality beofre or after forewarding requests. 
 4. Client -> Client code interacting with the Proxy thinking that it's the Real Subject. 
+
+<img src="../../Assets/ProxyClassDiagram.png" width="70%" margin="0 auto">
