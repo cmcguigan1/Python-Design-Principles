@@ -20,6 +20,7 @@ The adapter pattern helps in converting the interface of a class into another in
 <img src='../../Assets/AdapterClassDiagram.png' width="70%" margin="0 auto">
 
 
+
 ## Bridge Pattern
 The bridge pattern is designed to separate an object's abstraction from its implementation. The main goal is to decouple an abstraction and its implementation so that they can vary independently. Part of the Gang of Four (GoF) design patterns.
 
@@ -40,6 +41,7 @@ The bridge pattern is designed to separate an object's abstraction from its impl
 <img src="../../Assets/BridgeClassDiagram.png" width="70%" margin="0 auto">
 
 
+
 ## Composite Pattern
 In a composite pattern, the client is able to operate objects which may or may not represent its hierarchy. In simple terms composite pattern allows you to create hierarchical tree of unique complexities which allows treating every object individually.
 
@@ -58,6 +60,7 @@ In a composite pattern, the client is able to operate objects which may or may n
 3. Composite -> Class extends Component. Implements child-related behavior. Has children.
 
 <img src="../../Assets/CompositeClassDiagram.png" width="70%" margin="0 auto">
+
 
 
 ## Decorator Pattern
@@ -102,7 +105,25 @@ Creating a decorator to 'wrap' the functionality of a function.
 2. The base function being extended
 
 
+
 ## Facade Pattern
+In Facade Pattern, we provide a simplified interface to a set of interfaces of a subsystem for hiding its complexity of subsystem from the client. In simple words with the help of facade pattern, we make sub-systems easier to use by describing a higher-level interface, OR it provides a simplified interface to a set of interfaces in a subsystem, making it easier to use and understand.
+
+### Use Case
+- When there are many dependencies between implementation classes of abstraction and client requirements.
+- When you want to have layers in your subsystems.
+- When you want to provide a simple interface instead of a complex subsystem.
+
+### Main Idea
+- Provide a higher-level, simplified interface to a complex system, shielding clients from the complexities of the subsystem.
+
+### Key Components
+1. Facade -> Central Class the Client interacts with. Provides a simplified and unified interface to the Subsystem Classes. Delegates Client requests to appropriate classes within the subsystem. 
+2. Subsystem Classes -> Individual Classes and components that make up the complex sytem. Clients can access these classes directly BUT the Facade acts as a high-level interface for them.
+3. Client -> Code interacts with the Facade to access the subsystem's functionality. 
+
+<img src="../../Assets/FacadeClassDiagram.png" width="70%" margin="0 auto">
+
 
 
 ## Flyweight Pattern
@@ -126,6 +147,8 @@ Flyweight Patterns helps us to reuse similar kinds of existing objects by storin
 4. Client -> Uses Flyweight Objects. Passes the Extrinsic data ehen necessary.
 
 <img src="../../Assets/FlyweightClassDiagram.png" width="70%" margin="0 auto">
+
+
 
 ## Proxy Pattern
 In Proxy Pattern we provide a placeholder or a surrogate object to control access to the original object. In simple terms, providing a proxy or dummy layer of information before the client before accessing the original data. It falls under the Gang of Four (GoF) design patterns and is designed to provide a surrogate or placeholder for another object to control access to it. 
