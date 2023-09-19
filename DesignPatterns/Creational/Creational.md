@@ -58,11 +58,11 @@ The Singleton Pattern specifies that only one instance can be instantiated from 
 - Used when a given class can have only one instance is available to all clients. 
 - For example, a single database object which is shared by all the different parts of a program is an example of a singleton class.
 
-### Main Idea
-- 
-
-### Key Components
-1. Abstract Factory -> Interface or Abstract Class. Declares a set of factory methods, each responsible for creating a family of related objects. 
+### Key Components of the Singleton Class
+1. Private Constructor -> A private constructor method. So Singleton Class cannot be instantiated from outside the class
+2. Private Instance -> A private static instance of itself. This instance is the only one that will exist throughout the entire application's lifetime
+3. Public Access Point -> A public static method (usually called getInstance()). Returns the private instance. This method is responsible for creating the instance on the first call and returning the existing instance on subsequent calls.
+4. Lazy Initialization -> The Singleton instance is often created lazily (i.e., the instance is created only when it is first needed). This is done to minimize resource usage when the Singleton is not used immediately.
 
 <img src="../../Assets/SingletonClassDiagram.gif" width="70%">
 
